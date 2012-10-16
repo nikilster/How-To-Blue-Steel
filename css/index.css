@@ -123,6 +123,26 @@ body
 	font-weight:bold;
 	line-height:normal;
 }
+
+/*
+	Social 
+*/
+.socialSharing
+{
+	width: 250px;
+	margin: auto;
+	height: 30px;
+}
+.tweetButton
+{
+	width:100px;
+	float:left;
+}
+.likeButton
+{
+	float:left;
+}
+
 /*
 	The Images
 */
