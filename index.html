@@ -116,23 +116,37 @@
 
   	<script type="text/javascript">
 
-  		var PLAY_MUSIC = true;
-  		//Create Sound
-	  	var mySound = new buzz.sound( "music/relax", {
-			    formats: ["mp3"],
-			    loop:true
-			});
-
-	  	//Play
-	  	var START_TIME = 26;
-			if(PLAY_MUSIC)
-				mySound.setTime(START_TIME)
-				.play()
-    		.fadeIn()
-    		.loop();
-
     	//Document - On Ready
     	$(document).ready(function(){
+
+			var PLAY_MUSIC = true;
+	  		//Create Sound
+		  	var mySound = new buzz.sound( "music/relax", {
+				    formats: ["mp3", "ogg"],
+				    loop:true
+				});
+
+
+
+		  	//Play
+		  	var START_TIME = 26;
+
+
+		  	//If we are playing music
+			if(PLAY_MUSIC)
+			{			
+				//Firefox and opera (setTime doesnt workign for the buzz library)
+				if($.browser.mozilla || $.browser.opera)
+					mySound.play()
+	    				.fadeIn()
+	    				.loop();
+
+    			else
+	    			mySound.setTime(START_TIME)
+						.play()
+	    				.fadeIn()
+	    				.loop();
+    		}
 
     		//Autoplay Bootstrap Carousel
 				$('.carousel').carousel({
