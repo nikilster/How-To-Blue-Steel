@@ -93,6 +93,7 @@ body
 .masthead p
 {
 	font-size:20px;
+	margin-bottom:12px;
 }
 
 /*
@@ -131,7 +132,7 @@ body
 {
 	width: 250px;
 	margin: auto;
-	height: 30px;
+	height: 36px;
 }
 .tweetButton
 {
