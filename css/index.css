@@ -97,6 +97,20 @@ body
 }
 
 /*
+	Character
+*/
+#character
+{
+	position:absolute;
+	height:80px;
+	top:-12px;
+	left:100%;
+	opacity:0;
+	/* Animate in */
+	/*left:80px;*/
+}
+
+/*
 	Steps Container
 */
 #steps
